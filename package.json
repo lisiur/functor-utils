@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "babel-node src/index.js",
+    "test": "babel-node src/test.js",
     "build": "babel src --out-dir lib"
   },
   "author": "lisiur",

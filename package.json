@@ -1,0 +1,23 @@
+{
+  "name": "module_learn",
+  "version": "1.0.0",
+  "description": "module_learn",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node src/index.js",
+    "build": "babel src --out-dir lib"
+  },
+  "author": "lisiur",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-core": "^6.24.0",
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.0",
+    "babel-plugin-transform-es2015-parameters": "^6.23.0",
+    "babel-plugin-transform-es2015-spread": "^6.22.0",
+    "babel-plugin-transform-strict-mode": "^6.22.0",
+    "lodash": "^4.17.4",
+    "ramda": "^0.23.0"
+  }
+}

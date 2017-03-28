@@ -1,20 +1,20 @@
-const _ = require('lodash')
-const R = require('./utils/fp')
-const C = require('./classes/containers')
-const U = require('./utils/utils')
+var _ = require('lodash')
+var R = require('./utils/fp')
+var C = require('./classes/containers')
+var U = require('./utils/utils')
 
-const Container = C.Container
-const cloneDeep = _.cloneDeep
+var Container = C.Container
+var cloneDeep = _.cloneDeep
 
 // Container -> Container -> Either(Left, Right)
-const getProp = R.curry((prop_Container, obj_Container) => {
+var getProp = R.curry((prop_Container, obj_Container) => {
   if(!R.is(Container, prop_Container)) {
     prop_Container = Container.of(prop_Container)
   }
   if(!R.is(Container, obj_Container)) {
     obj_Container = Container.of(obj_Container)
   }
-  let targetValue_Maybe = U.prop(prop_Container, obj_Container)
+  var targetValue_Maybe = U.prop(prop_Container, obj_Container)
   if(targetValue_Maybe.isNil()) {
     return U.Left({
       code: 'PROP_CANNOT_BE_FOUND',

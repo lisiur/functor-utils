@@ -1,15 +1,15 @@
-const fpu = require('./exports')
-const R = fpu.R
-const C = fpu.C
-const U = fpu.U
-const getProp = fpu.getProp
+var fpu = require('./exports');
+var R = fpu.R
+var C = fpu.C
+var U = fpu.U
+var getProp = fpu.getProp
 
 Object.prototype.log = function() {
   if(console) {
     console.log(this)
   }
 }
-let obj = {
+var obj = {
   id: 1,
   name: 'Object',
   config: {
@@ -18,23 +18,23 @@ let obj = {
   }
 }
 
-let obj2 = {
+var obj2 = {
   config: {
     label: 'obj2',
   }
 }
 
-let colorTB = {
+var colorTB = {
   red: '#FF0000',
   green: '#00FF00',
   blue: '#0000FF'
 }
 
-const getObjCfgColor = getProp('config.color')
-const getColorValue = getProp(R.__, colorTB)
-const getObjColorValue = R.compose(getColorValue, getObjCfgColor)
+var getObjCfgColor = getProp('config.color')
+var getColorValue = getProp(R.__, colorTB)
+var getObjColorValue = R.compose(getColorValue, getObjCfgColor)
 
-const handleRight = U.getValue
-const handleLeft = R.curry((color, either) => color)
+var handleRight = U.getValue
+var handleLeft = R.curry((color, either) => color)
 
-const colorValue = U.either(handleLeft('#000000'), handleRight, getObjColorValue(obj2)).log()
+var colorValue = U.either(handleLeft('#000000'), handleRight, getObjColorValue(obj2)).log()

@@ -1,7 +1,7 @@
 {
-  "name": "fp-utils",
+  "name": "functor-utils",
   "version": "1.0.0",
-  "description": "utils based on fp",
+  "description": "functor utils",
   "main": "index.js",
   "dependencies": {
     "lodash": "^4.17.4",
@@ -13,12 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lisiur/fp-utils.git"
+    "url": "git+https://github.com/lisiur/functor-utils.git"
   },
   "author": "lisiurday",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lisiur/fp-utils/issues"
+    "url": "https://github.com/lisiur/functor-utils/issues"
   },
-  "homepage": "https://github.com/lisiur/fp-utils#readme"
+  "homepage": "https://github.com/lisiur/functor-utils#readme"
 }

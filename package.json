@@ -1,24 +1,24 @@
 {
   "name": "fp-utils",
   "version": "1.0.0",
-  "description": "utils for fp",
+  "description": "utils based on fp",
   "main": "index.js",
-  "scripts": {
-    "start": "babel-node src/index.js",
-    "test": "babel-node src/test.js",
-    "build": "babel src --out-dir lib"
-  },
-  "author": "lisiur",
-  "license": "MIT",
-  "devDependencies": {
-    "babel-cli": "^6.24.0",
-    "babel-core": "^6.24.0",
-    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.0",
-    "babel-plugin-transform-es2015-parameters": "^6.23.0",
-    "babel-plugin-transform-es2015-spread": "^6.22.0",
-    "babel-plugin-transform-strict-mode": "^6.22.0",
+  "dependencies": {
     "lodash": "^4.17.4",
     "ramda": "^0.23.0"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node 'src/test.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lisiur/fp-utils.git"
+  },
+  "author": "lisiurday",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lisiur/fp-utils/issues"
+  },
+  "homepage": "https://github.com/lisiur/fp-utils#readme"
 }

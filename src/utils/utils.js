@@ -1,9 +1,14 @@
-import R from 'ramda'
-import _ from 'lodash'
+const R = require('ramda')
+const FP = require('../classes/containers')
 
-import {Container, ID, Maybe, Either, Left, Right} from '../classes/Containers'
+const Container = FP.Container
+const ID = FP.ID
+const Maybe = FP.Maybe
+const Either = FP.Either
+const Left = FP.Left
+const Right = FP.Right
 
-const Utils = {
+const utils = {
   Container: (x) => Container.of(x),
   ID: (x) => ID.of(x),
   Maybe: (x) => Maybe.of(x),
@@ -40,4 +45,4 @@ const Utils = {
   })
 }
 
-export default Utils
+module.exports = utils

@@ -1,7 +1,10 @@
-import {cloneDeep} from 'lodash'
-import R from './Utils/fp'
-import {Container} from './classes/Containers'
-import U from './Utils/utils'
+const _ = require('lodash')
+const R = require('./utils/fp')
+const C = require('./classes/containers')
+const U = require('./utils/utils')
+
+const Container = C.Container
+const cloneDeep = _.cloneDeep
 
 // Container -> Container -> Either(Left, Right)
 const getProp = R.curry((prop_Container, obj_Container) => {
@@ -25,8 +28,9 @@ const getProp = R.curry((prop_Container, obj_Container) => {
   }
 })
 
-export {
-  getProp,
-  U as C,
-  R
+module.exports = {
+  getProp: getProp,
+  C: C,
+  R: R,
+  U: U
 }

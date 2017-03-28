@@ -1,5 +1,5 @@
-import R from 'ramda'
-import {Container} from '../classes/Containers'
+const R = require('ramda')
+const Container = require('../classes/Containers').Container
 
 const __map = R.map
 R.map = R.curry((f, functor) => {
@@ -10,4 +10,4 @@ R.map = R.curry((f, functor) => {
   }
 })
 
-export default R
+module.exports = R

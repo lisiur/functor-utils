@@ -82,4 +82,11 @@ class Right extends Either {
   }
 }
 
-export {Container, ID, Maybe, Either, Left, Right}
+module.exports = {
+  Container: Container,
+  ID: ID,
+  Maybe: Maybe,
+  Either: Either,
+  Left: Left,
+  Right: Right
+}

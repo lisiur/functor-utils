@@ -1,4 +1,8 @@
-import {getProp, C, R} from './exports'
+const fpu = require('./exports')
+const R = fpu.R
+const C = fpu.C
+const U = fpu.U
+const getProp = fpu.getProp
 
 Object.prototype.log = function() {
   if(console) {
@@ -30,7 +34,7 @@ const getObjCfgColor = getProp('config.color')
 const getColorValue = getProp(R.__, colorTB)
 const getObjColorValue = R.compose(getColorValue, getObjCfgColor)
 
-const handleRight = C.getValue
+const handleRight = U.getValue
 const handleLeft = R.curry((color, either) => color)
 
-const colorValue = C.either(handleLeft('#000000'), handleRight, getObjColorValue(obj)).log()
+const colorValue = U.either(handleLeft('#000000'), handleRight, getObjColorValue(obj2)).log()

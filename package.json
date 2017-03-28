@@ -1,6 +1,6 @@
 {
   "name": "fp-utils",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "utils for fp",
   "main": "index.js",
   "scripts": {

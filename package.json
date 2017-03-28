@@ -1,7 +1,7 @@
 {
-  "name": "module_learn",
+  "name": "fp-utils",
   "version": "1.0.0",
-  "description": "module_learn",
+  "description": "utils for fp",
   "main": "index.js",
   "scripts": {
     "start": "babel-node src/index.js",

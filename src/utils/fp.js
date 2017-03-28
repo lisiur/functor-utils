@@ -1,5 +1,5 @@
 var R = require('ramda')
-var Container = require('../classes/Containers').Container
+var Container = require('../classes/containers').Container
 
 var __map = R.map
 R.map = R.curry((f, functor) => {

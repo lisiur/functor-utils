@@ -2,7 +2,8 @@ var fpu = require('./exports');
 var R = fpu.R
 var C = fpu.C
 var U = fpu.U
-var getProp = fpu.getProp
+var prop = fpu.prop
+var propWithDefault = fpu.propWithDefault
 
 Object.prototype.log = function() {
   if(console) {
@@ -30,11 +31,14 @@ var colorTB = {
   blue: '#0000FF'
 }
 
-var getObjCfgColor = getProp('config.color')
-var getColorValue = getProp(R.__, colorTB)
+var getObjCfgColor = prop('config.color')
+var getColorValue = prop(R.__, colorTB)
 var getObjColorValue = R.compose(getColorValue, getObjCfgColor)
 
 var handleRight = U.getValue
 var handleLeft = R.curry((color, either) => color)
 
-var colorValue = U.either(handleLeft('#000000'), handleRight, getObjColorValue(obj2)).log()
+U.either(handleLeft('#000000'), handleRight, getObjColorValue(obj2)).log()
+propWithDefault('config.color', '#000000', obj2).log()
+
+

@@ -7,7 +7,7 @@ var Container = C.Container
 var cloneDeep = _.cloneDeep
 
 // Container -> Container -> Either(Left, Right)
-var getProp = R.curry((prop_Container, obj_Container) => {
+var prop = R.curry((prop_Container, obj_Container) => {
   if(!R.is(Container, prop_Container)) {
     prop_Container = Container.of(prop_Container)
   }
@@ -28,9 +28,14 @@ var getProp = R.curry((prop_Container, obj_Container) => {
   }
 })
 
+var propWithDefault = R.curry((prop_Container, defaultVal, obj_Container) => {
+  return U.either(U.id(defaultVal), U.getValue, prop(prop_Container, obj_Container))
+})
+
 module.exports = {
-  getProp: getProp,
   C: C,
   R: R,
-  U: U
+  U: U,
+  prop: prop,
+  propWithDefault: propWithDefault
 }

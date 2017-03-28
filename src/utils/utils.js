@@ -17,13 +17,13 @@ const utils = {
   Right: (x) => Right.of(x),
 
   prop: R.curry((prop_Container, obj_Container) => {
-    if(obj_Container.constructor === Left) {
+    if (obj_Container.constructor === Left) {
       return Maybe.of(obj_Container)
     }
-    if(prop_Container.constructor === Left) {
+    if (prop_Container.constructor === Left) {
       return Maybe.of(prop_Container)
     }
-    if(prop_Container.isNil() || obj_Container.isNil()) {
+    if (prop_Container.isNil() || obj_Container.isNil()) {
       return Maybe.of(null)
     }
     let target_Maybe = Maybe.of(obj_Container.__value)
@@ -37,10 +37,17 @@ const utils = {
   getValue: (container) => {
     return container.__value
   },
+  id: (x, ...args) => {
+    return () => {
+      return x
+    }
+  },
   either: R.curry((f, g, e) => {
-    switch(e.constructor) {
-      case Left: return f(e)
-      case Right: return g(e)
+    switch (e.constructor) {
+      case Left:
+        return f(e)
+      case Right:
+        return g(e)
     }
   })
 }

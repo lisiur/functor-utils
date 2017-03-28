@@ -1,5 +1,5 @@
 const R = require('ramda')
-const FP = require('../classes/containers')
+const FP = require('../classes')
 
 const Container = FP.Container
 const ID = FP.ID

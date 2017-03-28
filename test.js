@@ -1,9 +1,8 @@
-var fpu = require('./exports');
-var R = fpu.R
-var C = fpu.C
-var U = fpu.U
-var prop = fpu.prop
-var propWithDefault = fpu.propWithDefault
+var R = require('./src/utils/ramda')
+var C = require('./src/classes')
+var U = require('./src/utils/utils')
+var prop = require('./src/prop')
+var propWithDefault = require('./src/propWithDefault')
 
 Object.prototype.log = function() {
   if(console) {

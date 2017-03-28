@@ -1,6 +1,6 @@
 var _ = require('lodash')
-var R = require('./utils/fp')
-var C = require('./classes/containers')
+var R = require('./utils/ramda')
+var C = require('./classes')
 var U = require('./utils/utils')
 
 var Container = C.Container
@@ -28,14 +28,4 @@ var prop = R.curry((prop_Container, obj_Container) => {
   }
 })
 
-var propWithDefault = R.curry((prop_Container, defaultVal, obj_Container) => {
-  return U.either(U.id(defaultVal), U.getValue, prop(prop_Container, obj_Container))
-})
-
-module.exports = {
-  C: C,
-  R: R,
-  U: U,
-  prop: prop,
-  propWithDefault: propWithDefault
-}
+module.exports = prop

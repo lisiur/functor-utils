@@ -53,7 +53,6 @@ class Either extends Container{
     }
   }
 }
-
 class Left extends Either {
   constructor(x) {
     super(x)
@@ -67,7 +66,6 @@ class Left extends Either {
     return new Left(x)
   }
 }
-
 class Right extends Either {
   constructor(x) {
     super(x)

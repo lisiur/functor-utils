@@ -1,6 +1,6 @@
 var R = require('./src/utils/ramda')
 var C = require('./src/classes')
-var U = require('./src/utils/utils')
+var U = require('./src/utils')
 var prop = require('./src/prop')
 var propWithDefault = require('./src/propWithDefault')
 
@@ -39,5 +39,3 @@ var handleLeft = R.curry((color, either) => color)
 
 U.either(handleLeft('#000000'), handleRight, getObjColorValue(obj2)).log()
 propWithDefault('config.color', '#000000', obj2).log()
-
-

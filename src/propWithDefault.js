@@ -1,5 +1,5 @@
 var R = require('./utils/ramda')
-var U = require('./utils/utils')
+var U = require('./utils')
 var prop = require('./prop')
 
 var propWithDefault = R.curry((prop_Container, defaultVal, obj_Container) => {

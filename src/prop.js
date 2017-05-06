@@ -1,7 +1,7 @@
 var _ = require('lodash')
 var R = require('./utils/ramda')
 var C = require('./classes')
-var U = require('./utils/utils')
+var U = require('./utils')
 
 var Container = C.Container
 var cloneDeep = _.cloneDeep
